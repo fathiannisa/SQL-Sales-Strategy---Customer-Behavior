@@ -17,9 +17,10 @@ This repository demonstrates how SQL can be used to answer real business questio
 - Finding first and last buyers by country
 - Ranking customer purchases by product value
 
-## 🛠️ Tech Used
-- SQL (PostgreSQL syntax)
-- Window functions (e.g., `RANK()`, `LEAD()`, `FIRST_VALUE()`, `NTH_VALUE()`)
-- Common Table Expressions (CTEs)
-- Aggregations and joins
-- Views and stored procedure logic
+### 🛠️ Tools and Techniques Used
+- **SQL (PostgreSQL syntax)** for data manipulation and analysis  
+- **Window functions** like `RANK()`, `LEAD()`, `FIRST_VALUE()`, `NTH_VALUE()` for advanced customer and sales insights  
+- **CTEs** for breaking down complex queries into readable steps  
+- **Aggregations & Joins** to calculate totals, averages, and combine related data  
+- **Views & Procedural Logic** to create reusable queries and simulate stored procedure behavior  
+- **Date & Time functions** for trend analysis and tracking customer behavior over time
