@@ -109,7 +109,7 @@ GROUP BY 1,2,3
 ORDER BY 2 ASC;
 
 
--- CASE 7: Kali ini pemilik toko ingin melihat customer yg melakukan order pertama dan terakhir di tiap negara.
+-- CASE 7: This time, the store owner wants to see customers who made the first and last orders in each country.
 WITH first_last_customer AS(
 	SELECT country, customername, orderdate,
 	FIRST_VALUE(customername) OVER(PARTITION BY country ORDER BY orderdate) AS first_customer,
@@ -121,8 +121,8 @@ WITH first_last_customer AS(
 	FROM first_last_customer
 	GROUP BY 1,2,3;
 
--- CASE 8: pemilik toko tertarik untuk mengetahui produk termahal ke-n yg diorder tiap customer. buatlah query tsb ke dalam procedure.
--- Produk termahal kedua
+-- CASE 8: The store owner wants to know the N-th most expensive product ordered by each customer. Create a procedure to perform this query.
+-- Example: the second most expensive product
 WITH customer_products_ordered AS(
 	SELECT customername, productname, priceeach
 	FROM customers
